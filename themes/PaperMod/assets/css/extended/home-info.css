@@ -1,0 +1,46 @@
+/*
+This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+
+Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
+*/
+
+@media only screen and (min-width: 400px) {
+    .home-info {
+        flex-direction: row;
+    }
+
+    .home-info-avatar-container {
+        border-right: solid 1px gray;
+        margin-right: 14px;
+        padding-right: 12px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .home-info-content {
+        text-align: center;
+    }
+
+    .home-info-content li {
+        list-style: none;
+    }
+
+    .home-info-avatar-container {
+        margin: 0 auto;
+    }
+}
+
+.home-info-avatar {
+    background-image: url('/astro.jpg');
+    background-position: center;
+    background-size: 135px;
+    border-radius: 50%;
+    border: solid 2px white;
+    width: 150px;
+    height: 159px;
+}
+
+.home-info-avatar-container {
+    width: 170px;
+    height: 160px;
+}

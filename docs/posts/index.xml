@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Inbits Blog</title>
+    <link>https://inbits-sec.com/posts/</link>
+    <description>Recent content in Posts on Inbits Blog</description>
+    <image>
+      <url>https://inbits-sec.com/</url>
+      <link>https://inbits-sec.com/</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Wed, 25 May 2022 12:32:02 +0100</lastBuildDate><atom:link href="https://inbits-sec.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My OSCP Preparation Tips</title>
+      <link>https://inbits-sec.com/posts/oscp-prep-tips/</link>
+      <pubDate>Wed, 25 May 2022 12:32:02 +0100</pubDate>
+      
+      <guid>https://inbits-sec.com/posts/oscp-prep-tips/</guid>
+      <description>It’s almost a bit of a cliché after passing the OSCP to do a writeup about the journey it took to get there - but I’m embracing the cliché for two reasons:
+ When I was preparing I encountered tips and suggestions in blog posts that had a huge impact on the rest of my preparation. Approaching the OSCP with experience as a Programmer/Software Engineer can result in slightly different prioritisation during preparation, and anecdotally it’s touched on in fewer guides because it’s not the common path.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,58 @@
+baseURL: 'https://inbits-sec.com/'
+languageCode: 'en-gb'
+title: 'Inbits Blog'
+theme: "PaperMod"
+publishDir: "docs"
+enableEmoji: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+menu:
+  main:
+    - identifier: about
+      name: about me
+      url: /about/
+      weight: 10
+
+params:
+  env: production 
+  title: Inbits
+  description: "Personal blog for security-related content."
+  keywords: [Blog, Cybersecurity, Hacking, Cyber, OSCP]
+  author: Tom Brice
+  images: [""]
+  defaultTheme: dark
+  disableThemeToggle: false
+
+  homeInfoParams:
+      Title: Tom Brice
+      Content: >
+        OSCP - Cyber Security Engineer
+        
+        - Interested in security research, exploit development, and red teaming.
+      imageUrl: 'astro.jpg'
+  
+  socialIcons:
+    - name: hackthebox
+      url: "https://app.hackthebox.com/profile/87078"
+    - name: twitter
+      url: "https://twitter.com/inbits9"
+    - name: github
+      url: "https://github.com/inb1ts"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/thomas-brice-cyber"
+
+  ShowToc: true
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: false
+  ShowCodeCopyButtons: false
+  comments: false
+  hideMeta: false
+
