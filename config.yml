@@ -23,7 +23,7 @@ params:
   env: production 
   title: Inbits
   description: "Personal blog for security-related content."
-  keywords: [Blog, Cybersecurity, Hacking, Cyber, OSCP]
+  keywords: [Blog, Cybersecurity, Hacking, Cyber, OSCP, Maldev, Redteam]
   author: Tom Brice
   images: [""]
   defaultTheme: dark
@@ -32,20 +32,16 @@ params:
   homeInfoParams:
       Title: Tom Brice
       Content: >
-        OSCP - Cyber Security Engineer
+        Cyber Security Engineer
         
-        - Interested in security research, exploit development, and red teaming.
+        - Interested in security research, malware development, and red teaming.
       imageUrl: 'astro.jpg'
   
   socialIcons:
     - name: hackthebox
       url: "https://app.hackthebox.com/profile/87078"
-    - name: twitter
-      url: "https://twitter.com/inbits9"
     - name: github
       url: "https://github.com/inb1ts"
-    - name: linkedin
-      url: "https://www.linkedin.com/in/thomas-brice-cyber"
 
   ShowToc: true
   ShowReadingTime: true
