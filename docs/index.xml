@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Wed, 25 May 2022 12:32:02 +0100</lastBuildDate><atom:link href="https://inbits-sec.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 07 Jul 2023 23:52:33 +0100</lastBuildDate><atom:link href="https://inbits-sec.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EDR Unhooking: Patching Falcon hooks without VirtualProtect</title>
+      <link>https://inbits-sec.com/posts/in-memory-unhooking/</link>
+      <pubDate>Fri, 07 Jul 2023 23:52:33 +0100</pubDate>
+      
+      <guid>https://inbits-sec.com/posts/in-memory-unhooking/</guid>
+      <description>I recently encountered a blog post by Signal Labs about using in-memory disassembly to perform EDR unhooking. In the post, the authors outline a technique whereby hook jumps implemented by Sophos are followed in order to find the relocated original syscall stub. This is first done for NtAllocateVirtualMemory, which the authors unhook by replacing the EDR&amp;rsquo;s hook with their own hook pointing to the relocated stub. Once they&amp;rsquo;ve unhooked this function, it can be leveraged for the further unhooking of other functions.</description>
+    </item>
+    
     <item>
       <title>My OSCP Preparation Tips</title>
       <link>https://inbits-sec.com/posts/oscp-prep-tips/</link>
