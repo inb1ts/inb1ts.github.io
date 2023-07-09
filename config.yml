@@ -42,6 +42,8 @@ params:
       url: "https://app.hackthebox.com/profile/87078"
     - name: github
       url: "https://github.com/inb1ts"
+    - name: twitter
+      url: "https://twitter.com/inbits_sec"
 
   ShowToc: true
   ShowReadingTime: true

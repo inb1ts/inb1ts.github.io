@@ -44,7 +44,7 @@ We jump to an address just a little bit above where we previously were. Here we 
 
 Unlike the Sophos example, we don't quickly encounter a jump that leads to the relocated syscall stub here, so what other options do we have?
 
-Well, we know what address the relocated syscall stub is going to jump **back** to at some point... the address that follows the locatio nof the original hook. We can just search through the relevant sections of allocated memory looking for that address - it's crude, but works.
+Well, we know what address the relocated syscall stub is going to jump **back** to at some point... the address that follows the location of the original hook. We can just search through the relevant sections of allocated memory looking for that address - it's crude, but works.
 
 ### Implementation
 
