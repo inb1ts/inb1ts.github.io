@@ -234,6 +234,10 @@ BOOL PatchHeapAddr(BYTE * landingAddr, VOID * targetAddr) {
 
 And at this point, we should have successfully unhooked the function without using `VirtualProtect`.
 
-As mentioned already, this is obviously incredibly brittle because it's reversing a specific piece of obfuscation where any of the hardcoded values could easily change. We could dynamically resolve the value added in the loops and the final jump, in case it was changed. Obligatory mention that nowadays of course user-land API hooking is just one part of the picture for modern EDRs, and isn't going to be sufficient for evasion on its own.
+As mentioned already, this is obviously incredibly brittle because it's reversing a specific piece of obfuscation where any of the hardcoded values could easily change. We could dynamically resolve the value added in the loops and the final jump, in case it was changed. Obligatory mention that nowadays of course user-land API hooking is just one part of the picture for modern EDRs, and isn't going to be sufficient for evasion on its own. Another note is that this has only been tested on a couple of different instances of Falcon but all within the same organisation - it may well be the case that the hardcoded values used to unhook actually differ in different deployments.
 
-Link to PoC repo: https://github.com/inb1ts/birdnet-poc
+### Demo and code
+
+Here's a video demo where the unhooking is performed, and execution is stepped through with a debugger to confirm that the unhook works. Link to PoC repo: https://github.com/inb1ts/birdnet-poc
+
+{{< youtube SCA8bk3FTp0>}}
