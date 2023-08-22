@@ -1,7 +1,7 @@
 ---
 title: "OpenFileMapping and KnownDlls"
 date: 2023-08-17T16:02:16+01:00
-draft: true
+draft: false
 ---
 
 A common method of unhooking user-land API hooks is to load a fresh copy of NTDLL from `KnownDlls`, a special object directory that's used to essentially cache commonly used system DLLs. We can use [WinObj](https://learn.microsoft.com/en-us/sysinternals/downloads/winobj) to view the Object Manager namespace, where we can see the `KnownDlls` directory, and the mapped sections it contains for each system DLL.
