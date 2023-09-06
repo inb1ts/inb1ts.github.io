@@ -10,7 +10,17 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Thu, 17 Aug 2023 16:02:16 +0100</lastBuildDate><atom:link href="https://inbits-sec.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 05 Sep 2023 15:58:43 +0100</lastBuildDate><atom:link href="https://inbits-sec.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Tool: CSSHide - Hiding in plain style</title>
+      <link>https://inbits-sec.com/posts/new-tool-csshide/</link>
+      <pubDate>Tue, 05 Sep 2023 15:58:43 +0100</pubDate>
+      
+      <guid>https://inbits-sec.com/posts/new-tool-csshide/</guid>
+      <description>I&amp;rsquo;ve recently been working on a small fun obfuscation tool called CSSHide, which can encode a payload in the colour values of a CSS file. This was inspired by the payload encoding modules featured at Maldev Academy, that include encoding payloads as IP addresses, UUIDs, and MAC addresses.
+Why CSS files? The purpose of the tool is to help facilitate blending in with common browser traffic, which will usually include frequent requests for CSS files that the browser will then use to format the layout of a webpage.</description>
+    </item>
+    
     <item>
       <title>OpenFileMapping and KnownDlls</title>
       <link>https://inbits-sec.com/posts/openfilemapping-and-knowndlls/</link>
