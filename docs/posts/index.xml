@@ -10,7 +10,16 @@
     </image>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 05 Sep 2023 15:58:43 +0100</lastBuildDate><atom:link href="https://inbits-sec.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Dec 2024 12:32:40 +0000</lastBuildDate><atom:link href="https://inbits-sec.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CVE-2024-11616: Netskope EPDLP Double-Fetch</title>
+      <link>https://inbits-sec.com/posts/cve-2024-11616-netskope/</link>
+      <pubDate>Sat, 28 Dec 2024 12:32:40 +0000</pubDate>
+      
+      <guid>https://inbits-sec.com/posts/cve-2024-11616-netskope/</guid>
+      <description>Around a year ago, I decided to orient myself more keenly towards vulnerability research. It had become apparent to me that it was the area of offensive security, and the process, that I had enjoyed dipping my toes into the most. I spent much of the last year shoring up fundamentals - finishing Ret2Systems&amp;rsquo; excellent Wargames, a bunch of OST2 modules, and the Trainsec Kernel Programming modules - before jumping into some real world targets and starting to develop my workflow.</description>
+    </item>
+    
     <item>
       <title>New Tool: CSSHide - Hiding in plain style</title>
       <link>https://inbits-sec.com/posts/new-tool-csshide/</link>

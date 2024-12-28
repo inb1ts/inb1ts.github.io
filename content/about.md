@@ -8,11 +8,11 @@ summary:
   Brief overview of experience and contact information.
 ---
 
-I've been working in security for the last 3-4 years, having previously been a software engineer.
+I am a security professional with a strong interest in vulnerability research, windows internals, and building offensive tooling. I started my career as a Software Engineer, and moved into security after getting hooked on CTFs!
 
-Primary interests are malware development, windows internals, red teaming.
 
-Best reachable by the Red-Team VX Community discord (`inbits`) or on the sinking twitter ship.
+### CVEs
+- [CVE-2024-11616](https://www.cve.org/CVERecord?id=CVE-2024-11616)
 
 ### Certifications
 - OSCP

@@ -23,7 +23,7 @@ params:
   env: production 
   title: Inbits
   description: "Personal blog for security-related content."
-  keywords: [Blog, Cybersecurity, Hacking, Cyber, OSCP, Maldev, Redteam]
+  keywords: [Blog, Cybersecurity, Hacking, Cyber, Vulnerability Research, OSCP, Maldev, Redteam]
   author: Tom Brice
   images: [""]
   defaultTheme: dark
@@ -34,16 +34,18 @@ params:
       Content: >
         Cyber Security Engineer
         
-        - Security Research - Malware Development - Windows Internals - Red Teaming
+        - Offensive Security Research -
       imageUrl: 'astro.jpg'
   
   socialIcons:
-    - name: hackthebox
-      url: "https://app.hackthebox.com/profile/87078"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/thomas-brice/"
     - name: github
       url: "https://github.com/inb1ts"
     - name: twitter
       url: "https://twitter.com/inbits_sec"
+    - name: hackthebox
+      url: "https://app.hackthebox.com/profile/87078"
 
   ShowToc: true
   ShowReadingTime: true
