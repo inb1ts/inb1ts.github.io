@@ -12,7 +12,9 @@ I am a security professional with a strong interest in vulnerability research, w
 
 
 ### CVEs
-- [CVE-2024-11616](https://www.cve.org/CVERecord?id=CVE-2024-11616)
+- [CVE-2024-11616](https://www.cve.org/CVERecord?id=CVE-2024-11616) (Netskope epdlpdrv.sys)
+- CVE-2025-5942 (Netskope epdlpdrv.sys)
+- CVE-2025-5941 (Netskope stadrvx64.sys)
 
 ### Certifications
 - OSCP
