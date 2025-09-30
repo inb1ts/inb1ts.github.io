@@ -17,7 +17,7 @@
       <pubDate>Sat, 28 Dec 2024 12:32:40 +0000</pubDate>
       
       <guid>https://inbits-sec.com/posts/cve-2024-11616-netskope/</guid>
-      <description>Around a year ago, I decided to orient myself more keenly towards vulnerability research. It had become apparent to me that it was the area of offensive security, and the process, that I had enjoyed dipping my toes into the most. I spent much of the last year shoring up fundamentals - finishing Ret2Systems&amp;rsquo; excellent Wargames, a bunch of OST2 modules, and the Trainsec Kernel Programming modules - before jumping into some real world targets and starting to develop my workflow.</description>
+      <description>&lt;p&gt;Around a year ago, I decided to orient myself more keenly towards vulnerability research. It had become apparent to me that it was the area of offensive security, and the process, that I had enjoyed dipping my toes into the most. I spent much of the last year shoring up fundamentals - finishing Ret2Systems&amp;rsquo; excellent &lt;a href=&#34;https://wargames.ret2.systems/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wargames&lt;/a&gt;, a bunch of &lt;a href=&#34;https://p.ost2.fyi/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;OST2 modules&lt;/a&gt;, and the Trainsec &lt;a href=&#34;https://training.trainsec.net/windows-kernel-programming-1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Kernel Programming modules&lt;/a&gt; - before jumping into some real world targets and starting to develop my workflow. This blog post documents the first vulnerability that I found and reported, &lt;a href=&#34;https://www.cve.org/CVERecord?id=CVE-2024-11616&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CVE-2024-11616&lt;/a&gt;, in a driver created by &lt;a href=&#34;https://www.netskope.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Netskope&lt;/a&gt;. The bug is a pretty typical double-fetch, and requires elevated privileges to exploit, but due to the risk of Bring Your Own Vulnerable Driver (BYOVD) attacks, these bugs are still pretty important for vendors to catch. Despite it being a simple bug, successfully reporting something was a milestone I was eager to hit, so a small writeup seemed justified!&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,8 +26,9 @@
       <pubDate>Tue, 05 Sep 2023 15:58:43 +0100</pubDate>
       
       <guid>https://inbits-sec.com/posts/new-tool-csshide/</guid>
-      <description>I&amp;rsquo;ve recently been working on a small fun obfuscation tool called CSSHide, which can encode a payload in the colour values of a CSS file. This was inspired by the payload encoding modules featured at Maldev Academy, that include encoding payloads as IP addresses, UUIDs, and MAC addresses.
-Why CSS files? The purpose of the tool is to help facilitate blending in with common browser traffic, which will usually include frequent requests for CSS files that the browser will then use to format the layout of a webpage.</description>
+      <description>&lt;p&gt;I&amp;rsquo;ve recently been working on a small fun obfuscation tool called &lt;a href=&#34;https://github.com/inb1ts/CSSHide&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CSSHide&lt;/a&gt;, which can encode a payload in the colour values of a CSS file. This was inspired by the payload encoding modules featured at &lt;a href=&#34;https://maldevacademy.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Maldev Academy&lt;/a&gt;, that include encoding payloads as IP addresses, UUIDs, and MAC addresses.&lt;/p&gt;
+&lt;h2 id=&#34;why-css-files&#34;&gt;Why CSS files?&lt;/h2&gt;
+&lt;p&gt;The purpose of the tool is to help facilitate blending in with common browser traffic, which will usually include frequent requests for CSS files that the browser will then use to format the layout of a webpage. For example, here are all the CSS files requested when loading a youtube video:&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -36,8 +37,10 @@ Why CSS files? The purpose of the tool is to help facilitate blending in with co
       <pubDate>Thu, 17 Aug 2023 16:02:16 +0100</pubDate>
       
       <guid>https://inbits-sec.com/posts/openfilemapping-and-knowndlls/</guid>
-      <description>A common method of unhooking user-land API hooks is to load a fresh copy of NTDLL from KnownDlls, a special object directory that&amp;rsquo;s used to essentially cache commonly used system DLLs. We can use WinObj to view the Object Manager namespace, where we can see the KnownDlls directory, and the mapped sections it contains for each system DLL.
-Whilst working through the excellent Maldev Academy course material, it was pointed out that you can&amp;rsquo;t seem to use OpenFileMapping to retrieve a handle to the KnownDlls directory, despite it&amp;rsquo;s purpose being to open named file mapping objects.</description>
+      <description>&lt;p&gt;A common method of unhooking user-land API hooks is to load a fresh copy of NTDLL from &lt;code&gt;KnownDlls&lt;/code&gt;, a special object directory that&amp;rsquo;s used to essentially cache commonly used system DLLs. We can use &lt;a href=&#34;https://learn.microsoft.com/en-us/sysinternals/downloads/winobj&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WinObj&lt;/a&gt; to view the Object Manager namespace, where we can see the &lt;code&gt;KnownDlls&lt;/code&gt; directory, and the mapped sections it contains for each system DLL.&lt;/p&gt;
+&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://inbits-sec.com/winobj_knowndlls.png#center&#34; alt=&#34;WinObj_KnownDlls&#34;  /&gt;
+&lt;/p&gt;
+&lt;p&gt;Whilst working through the excellent &lt;a href=&#34;https://maldevacademy.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Maldev Academy&lt;/a&gt; course material, it was pointed out that you can&amp;rsquo;t seem to use &lt;code&gt;OpenFileMapping&lt;/code&gt; to retrieve a handle to the &lt;code&gt;KnownDlls&lt;/code&gt; directory, despite it&amp;rsquo;s purpose being to open named file mapping objects. Attempting to use the function to open &lt;code&gt;\KnownDlls\ntdll.dll&lt;/code&gt;, or any other DLL in that directory, will result in error 161 - &lt;code&gt;ERROR_BAD_PATHNAME&lt;/code&gt;. Instead, most malware uses the native &lt;code&gt;NtOpenSection&lt;/code&gt; instead.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -46,7 +49,7 @@ Whilst working through the excellent Maldev Academy course material, it was poin
       <pubDate>Fri, 07 Jul 2023 23:52:33 +0100</pubDate>
       
       <guid>https://inbits-sec.com/posts/in-memory-unhooking/</guid>
-      <description>I recently encountered a blog post by Signal Labs about using in-memory disassembly to perform EDR unhooking. In the post, the authors outline a technique whereby hook jumps implemented by Sophos are followed in order to find the relocated original syscall stub. This is first done for NtAllocateVirtualMemory, which the authors unhook by replacing the EDR&amp;rsquo;s hook with their own hook pointing to the relocated stub. Once they&amp;rsquo;ve unhooked this function, it can be leveraged for the further unhooking of other functions.</description>
+      <description>&lt;p&gt;I recently encountered a &lt;a href=&#34;https://signal-labs.com/analysis-of-edr-hooks-bypasses-amp-our-rust-sample/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; by Signal Labs about using in-memory disassembly to perform EDR unhooking. In the post, the authors outline a technique whereby hook jumps implemented by Sophos are followed in order to find the relocated original syscall stub. This is first done for &lt;code&gt;NtAllocateVirtualMemory&lt;/code&gt;, which the authors unhook by replacing the EDR&amp;rsquo;s hook with their own hook pointing to the relocated stub. Once they&amp;rsquo;ve unhooked this function, it can be leveraged for the further unhooking of other functions.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -55,8 +58,12 @@ Whilst working through the excellent Maldev Academy course material, it was poin
       <pubDate>Wed, 25 May 2022 12:32:02 +0100</pubDate>
       
       <guid>https://inbits-sec.com/posts/oscp-prep-tips/</guid>
-      <description>It’s almost a bit of a cliché after passing the OSCP to do a writeup about the journey it took to get there - but I’m embracing the cliché for two reasons:
-When I was preparing I encountered tips and suggestions in blog posts that had a huge impact on the rest of my preparation. Approaching the OSCP with experience as a Programmer/Software Engineer can result in slightly different prioritisation during preparation, and anecdotally it’s touched on in fewer guides because it’s not the common path.</description>
+      <description>&lt;p&gt;It’s almost a bit of a cliché after passing the OSCP to do a writeup about the journey it took to get there - but I’m embracing the cliché for two reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;When I was preparing I encountered tips and suggestions in blog posts that had a huge impact on the rest of my preparation.&lt;/li&gt;
+&lt;li&gt;Approaching the OSCP with experience as a Programmer/Software Engineer can result in slightly different prioritisation during preparation, and anecdotally it’s touched on in fewer guides because it’s not the common path.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This isn’t going to be a structured plan, and it won’t encapsulate everything I did to prepare. I just want to throw out there - at a high level - some of the more important lessons I learnt and resources I used.&lt;/p&gt;</description>
     </item>
     
     <item>
