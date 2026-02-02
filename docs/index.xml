@@ -11,8 +11,16 @@
     </image>
     <generator>Hugo -- 0.150.1</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 02 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Feb 2026 13:02:29 +0000</lastBuildDate>
     <atom:link href="https://inbits-sec.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CVE-2026-20820 Root Cause Analysis</title>
+      <link>https://inbits-sec.com/posts/cve-2026-20820-root-cause/</link>
+      <pubDate>Mon, 02 Feb 2026 13:02:29 +0000</pubDate>
+      <guid>https://inbits-sec.com/posts/cve-2026-20820-root-cause/</guid>
+      <description>&lt;p&gt;CVE-2026-20820 is a vulnerability in the Common Log File System (CLFS) driver that was included in the January 2026 Patch Tuesday. The &lt;a href=&#34;https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-20820&#34;&gt;advisory&lt;/a&gt; lists it as a heap overflow that can be used for EoP.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;CLFS.sys&lt;/code&gt; has a rich history of vulnerabilities and exploits, but a lot of them historically have involved modifying or corrupting the BLF files parsed by the driver. I hadn&amp;rsquo;t looked into CLFS in much detail before, so I thought doing some n-day analysis would be a good framing exercise to gain some familiarity. I also noticed in the docs the mention of &lt;a href=&#34;https://support.microsoft.com/en-gb/topic/common-log-file-system-clfs-authentication-mitigation-af903a7e-ceca-410e-a5bf-58b1c79e861d&#34;&gt;Authentication Codes&lt;/a&gt;, a relatively recent hardening feature that was added with the intent of mitigating the type of exploits that modify the BLF files. So I was curious as to what other areas of attack surface were still yielding bugs that are capable of being used for EoP.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Reversing npsvctrig.sys - Named Pipe Service Triggers</title>
       <link>https://inbits-sec.com/posts/npsvctrig-notes/</link>
