@@ -28,6 +28,9 @@ params:
   images: ["<astro.jpg>"]
   defaultTheme: auto
   disableThemeToggle: false
+  assets:
+    disableFingerprinting: true
+
 
   homeInfoParams:
       Title: Tom Brice
