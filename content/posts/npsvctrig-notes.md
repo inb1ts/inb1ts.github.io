@@ -1,7 +1,7 @@
 ---
 title: "Reversing npsvctrig.sys - Named Pipe Service Triggers"
 date: 2026-02-02
-draft: true
+draft: false
 showToc: false
 tags: ["windows", "reversing"]
 ---
