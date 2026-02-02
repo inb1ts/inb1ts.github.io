@@ -25,8 +25,8 @@ params:
   description: "Personal blog for security-related content."
   keywords: [Blog, Cybersecurity, Hacking, Cyber, Vulnerability Research, OSCP, Maldev, Redteam]
   author: Tom Brice
-  images: [""]
-  defaultTheme: dark
+  images: ["<astro.jpg>"]
+  defaultTheme: auto
   disableThemeToggle: false
 
   homeInfoParams:

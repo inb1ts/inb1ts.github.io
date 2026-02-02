@@ -8,7 +8,7 @@ summary:
   Brief overview of experience and contact information.
 ---
 
-I am a security professional with a strong interest in vulnerability research, windows internals, and building offensive tooling. I started my career as a Software Engineer, and moved into security after getting hooked on CTFs!
+Security professional with a strong interest in vulnerability research, windows internals, and building offensive tooling. I started my career as a Software Engineer, and moved into security after getting hooked on CTFs.
 
 
 ### CVEs
