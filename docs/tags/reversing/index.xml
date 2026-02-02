@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Reversing on Inbits Blog</title>
-    <link>http://localhost:1313/tags/reversing/</link>
+    <link>https://inbits-sec.com/tags/reversing/</link>
     <description>Recent content in Reversing on Inbits Blog</description>
     <image>
       <title>Inbits Blog</title>
-      <url>http://localhost:1313/%3Castro.jpg%3E</url>
-      <link>http://localhost:1313/%3Castro.jpg%3E</link>
+      <url>https://inbits-sec.com/%3Castro.jpg%3E</url>
+      <link>https://inbits-sec.com/%3Castro.jpg%3E</link>
     </image>
     <generator>Hugo -- 0.150.1</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 02 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/reversing/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://inbits-sec.com/tags/reversing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reversing npsvctrig.sys - Named Pipe Service Triggers</title>
-      <link>http://localhost:1313/posts/npsvctrig-notes/</link>
+      <link>https://inbits-sec.com/posts/npsvctrig-notes/</link>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/npsvctrig-notes/</guid>
+      <guid>https://inbits-sec.com/posts/npsvctrig-notes/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post is a writeup of my notes from reversing &lt;code&gt;npsvctrig.sys&lt;/code&gt;. I was recently looking into Service Triggers and couldn&amp;rsquo;t find any writeups or info on this driver - hence sharing this.&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;fltmc output&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/npsvctrig/fltmc_npsvctrig.png#center&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;fltmc output&#34; loading=&#34;lazy&#34; src=&#34;https://inbits-sec.com/npsvctrig/fltmc_npsvctrig.png#center&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;npsvctrig.sys&lt;/code&gt; is a native Windows filesystem minifilter driver that implements, as the name suggests, part of the functionality for Named Pipe Service Triggers. The driver is small and straightforward. In a nutshell, it maintains a list of active named pipe triggers, uses minifilter callbacks to intercept specific actions being performed against those named pipes, and then publishes an ETW event containing the name of the pipe when one occurs. The Service Control Manager (SCM) consumes these events, and takes them as an indicator it should start the corresponding service executable.&lt;/p&gt;</description>
     </item>
   </channel>

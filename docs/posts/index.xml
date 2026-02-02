@@ -2,64 +2,64 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on Inbits Blog</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://inbits-sec.com/posts/</link>
     <description>Recent content in Posts on Inbits Blog</description>
     <image>
       <title>Inbits Blog</title>
-      <url>http://localhost:1313/%3Castro.jpg%3E</url>
-      <link>http://localhost:1313/%3Castro.jpg%3E</link>
+      <url>https://inbits-sec.com/%3Castro.jpg%3E</url>
+      <link>https://inbits-sec.com/%3Castro.jpg%3E</link>
     </image>
     <generator>Hugo -- 0.150.1</generator>
     <language>en-gb</language>
     <lastBuildDate>Mon, 02 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://inbits-sec.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reversing npsvctrig.sys - Named Pipe Service Triggers</title>
-      <link>http://localhost:1313/posts/npsvctrig-notes/</link>
+      <link>https://inbits-sec.com/posts/npsvctrig-notes/</link>
       <pubDate>Mon, 02 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/npsvctrig-notes/</guid>
+      <guid>https://inbits-sec.com/posts/npsvctrig-notes/</guid>
       <description>&lt;p&gt;&lt;em&gt;This post is a writeup of my notes from reversing &lt;code&gt;npsvctrig.sys&lt;/code&gt;. I was recently looking into Service Triggers and couldn&amp;rsquo;t find any writeups or info on this driver - hence sharing this.&lt;/em&gt;&lt;/p&gt;
 &lt;h1 id=&#34;overview&#34;&gt;Overview&lt;/h1&gt;
-&lt;p&gt;&lt;img alt=&#34;fltmc output&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/npsvctrig/fltmc_npsvctrig.png#center&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;fltmc output&#34; loading=&#34;lazy&#34; src=&#34;https://inbits-sec.com/npsvctrig/fltmc_npsvctrig.png#center&#34;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;npsvctrig.sys&lt;/code&gt; is a native Windows filesystem minifilter driver that implements, as the name suggests, part of the functionality for Named Pipe Service Triggers. The driver is small and straightforward. In a nutshell, it maintains a list of active named pipe triggers, uses minifilter callbacks to intercept specific actions being performed against those named pipes, and then publishes an ETW event containing the name of the pipe when one occurs. The Service Control Manager (SCM) consumes these events, and takes them as an indicator it should start the corresponding service executable.&lt;/p&gt;</description>
     </item>
     <item>
       <title>CVE-2024-11616: Netskope EPDLP Double-Fetch</title>
-      <link>http://localhost:1313/posts/cve-2024-11616-netskope/</link>
+      <link>https://inbits-sec.com/posts/cve-2024-11616-netskope/</link>
       <pubDate>Sat, 28 Dec 2024 12:32:40 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cve-2024-11616-netskope/</guid>
+      <guid>https://inbits-sec.com/posts/cve-2024-11616-netskope/</guid>
       <description>&lt;p&gt;Around a year ago, I decided to orient myself more keenly towards vulnerability research. It had become apparent to me that it was the area of offensive security, and the process, that I had enjoyed dipping my toes into the most. I spent much of the last year shoring up fundamentals - finishing Ret2Systems&amp;rsquo; excellent &lt;a href=&#34;https://wargames.ret2.systems/&#34;&gt;Wargames&lt;/a&gt;, a bunch of &lt;a href=&#34;https://p.ost2.fyi/&#34;&gt;OST2 modules&lt;/a&gt;, and the Trainsec &lt;a href=&#34;https://training.trainsec.net/windows-kernel-programming-1&#34;&gt;Kernel Programming modules&lt;/a&gt; - before jumping into some real world targets and starting to develop my workflow. This blog post documents the first vulnerability that I found and reported, &lt;a href=&#34;https://www.cve.org/CVERecord?id=CVE-2024-11616&#34;&gt;CVE-2024-11616&lt;/a&gt;, in a driver created by &lt;a href=&#34;https://www.netskope.com/&#34;&gt;Netskope&lt;/a&gt;. The bug is a pretty typical double-fetch, and requires elevated privileges to exploit, but due to the risk of Bring Your Own Vulnerable Driver (BYOVD) attacks, these bugs are still pretty important for vendors to catch. Despite it being a simple bug, successfully reporting something was a milestone I was eager to hit, so a small writeup seemed justified!&lt;/p&gt;</description>
     </item>
     <item>
       <title>New Tool: CSSHide - Hiding in plain style</title>
-      <link>http://localhost:1313/posts/new-tool-csshide/</link>
+      <link>https://inbits-sec.com/posts/new-tool-csshide/</link>
       <pubDate>Tue, 05 Sep 2023 15:58:43 +0100</pubDate>
-      <guid>http://localhost:1313/posts/new-tool-csshide/</guid>
+      <guid>https://inbits-sec.com/posts/new-tool-csshide/</guid>
       <description>&lt;p&gt;I&amp;rsquo;ve recently been working on a small fun obfuscation tool called &lt;a href=&#34;https://github.com/inb1ts/CSSHide&#34;&gt;CSSHide&lt;/a&gt;, which can encode a payload in the colour values of a CSS file. This was inspired by the payload encoding modules featured at &lt;a href=&#34;https://maldevacademy.com/&#34;&gt;Maldev Academy&lt;/a&gt;, that include encoding payloads as IP addresses, UUIDs, and MAC addresses.&lt;/p&gt;
 &lt;h2 id=&#34;why-css-files&#34;&gt;Why CSS files?&lt;/h2&gt;
 &lt;p&gt;The purpose of the tool is to help facilitate blending in with common browser traffic, which will usually include frequent requests for CSS files that the browser will then use to format the layout of a webpage. For example, here are all the CSS files requested when loading a youtube video:&lt;/p&gt;</description>
     </item>
     <item>
       <title>OpenFileMapping and KnownDlls</title>
-      <link>http://localhost:1313/posts/openfilemapping-and-knowndlls/</link>
+      <link>https://inbits-sec.com/posts/openfilemapping-and-knowndlls/</link>
       <pubDate>Thu, 17 Aug 2023 16:02:16 +0100</pubDate>
-      <guid>http://localhost:1313/posts/openfilemapping-and-knowndlls/</guid>
+      <guid>https://inbits-sec.com/posts/openfilemapping-and-knowndlls/</guid>
       <description>&lt;p&gt;A common method of unhooking user-land API hooks is to load a fresh copy of NTDLL from &lt;code&gt;KnownDlls&lt;/code&gt;, a special object directory that&amp;rsquo;s used to essentially cache commonly used system DLLs. We can use &lt;a href=&#34;https://learn.microsoft.com/en-us/sysinternals/downloads/winobj&#34;&gt;WinObj&lt;/a&gt; to view the Object Manager namespace, where we can see the &lt;code&gt;KnownDlls&lt;/code&gt; directory, and the mapped sections it contains for each system DLL.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;WinObj_KnownDlls&#34; loading=&#34;lazy&#34; src=&#34;http://localhost:1313/winobj_knowndlls.png#center&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt=&#34;WinObj_KnownDlls&#34; loading=&#34;lazy&#34; src=&#34;https://inbits-sec.com/winobj_knowndlls.png#center&#34;&gt;&lt;/p&gt;
 &lt;p&gt;Whilst working through the excellent &lt;a href=&#34;https://maldevacademy.com&#34;&gt;Maldev Academy&lt;/a&gt; course material, it was pointed out that you can&amp;rsquo;t seem to use &lt;code&gt;OpenFileMapping&lt;/code&gt; to retrieve a handle to the &lt;code&gt;KnownDlls&lt;/code&gt; directory, despite it&amp;rsquo;s purpose being to open named file mapping objects. Attempting to use the function to open &lt;code&gt;\KnownDlls\ntdll.dll&lt;/code&gt;, or any other DLL in that directory, will result in error 161 - &lt;code&gt;ERROR_BAD_PATHNAME&lt;/code&gt;. Instead, most malware uses the native &lt;code&gt;NtOpenSection&lt;/code&gt; instead.&lt;/p&gt;</description>
     </item>
     <item>
       <title>EDR Unhooking: Patching Falcon hooks without VirtualProtect</title>
-      <link>http://localhost:1313/posts/in-memory-unhooking/</link>
+      <link>https://inbits-sec.com/posts/in-memory-unhooking/</link>
       <pubDate>Fri, 07 Jul 2023 23:52:33 +0100</pubDate>
-      <guid>http://localhost:1313/posts/in-memory-unhooking/</guid>
+      <guid>https://inbits-sec.com/posts/in-memory-unhooking/</guid>
       <description>&lt;p&gt;I recently encountered a &lt;a href=&#34;https://signal-labs.com/analysis-of-edr-hooks-bypasses-amp-our-rust-sample/&#34;&gt;blog post&lt;/a&gt; by Signal Labs about using in-memory disassembly to perform EDR unhooking. In the post, the authors outline a technique whereby hook jumps implemented by Sophos are followed in order to find the relocated original syscall stub. This is first done for &lt;code&gt;NtAllocateVirtualMemory&lt;/code&gt;, which the authors unhook by replacing the EDR&amp;rsquo;s hook with their own hook pointing to the relocated stub. Once they&amp;rsquo;ve unhooked this function, it can be leveraged for the further unhooking of other functions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My OSCP Preparation Tips</title>
-      <link>http://localhost:1313/posts/oscp-prep-tips/</link>
+      <link>https://inbits-sec.com/posts/oscp-prep-tips/</link>
       <pubDate>Wed, 25 May 2022 12:32:02 +0100</pubDate>
-      <guid>http://localhost:1313/posts/oscp-prep-tips/</guid>
+      <guid>https://inbits-sec.com/posts/oscp-prep-tips/</guid>
       <description>&lt;p&gt;It’s almost a bit of a cliché after passing the OSCP to do a writeup about the journey it took to get there - but I’m embracing the cliché for two reasons:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;When I was preparing I encountered tips and suggestions in blog posts that had a huge impact on the rest of my preparation.&lt;/li&gt;
